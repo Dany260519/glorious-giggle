@@ -1,4 +1,5 @@
 .fixed {
     position: fixed;
     background-color: blue;
+    color: white;
 }
