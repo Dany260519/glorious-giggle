@@ -1,5 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'); 
+
+* {
+    font-family: "Fira Sans", serif;
+    font-weight: 400;
+    font-style: normal;  
+}
+
 .fixed {
     position: fixed;
-    background-color: blue;
-    color: white;
+    background-color: rgba(80, 144, 247, 0.225);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    right: 0;
+    display: flex;
 }
+
+#navbar {
+    height: 30px;
+    top: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+#navbar-content {
+    padding: 10px;
+    margin: 0;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+.fixed li {
+    display: flex;
+    margin: 5px 0;
+    cursor: pointer;
+}
+li img {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+}
+a {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    margin: 5px;
+}
+
+a:hover {
+    color: #5177a1;
+}
+
+.span-nav {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12px;
+    font-weight: 700;
+    width: auto;
+    color: #5177a1;;
+    border: #5177a1 1px solid;
+    background-color: rgb(255, 249, 242);
+    padding: 3px;
+    border-top: none;
+    border-radius: 3px;
+    margin: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    position: absolute;
+    right: 10px;
+    top: 50px;
+}
+
+#contact-section {
+    display: flex;
+    flex-direction: column;
+    top: 40%;
+    width: 30px;
+}
+
+a i {
+    font-size: 25px;
+}
+
+a i:hover {
+    font-size: 23px;
+}
+
+.skills {
+    margin: 5px;
+    font-size: 16px;
+}
+
+.skills span, .h2 {
+    font-weight: 700;
+    color: #333333;
+}
+
+#recop {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.change {
+    font-size: 60px;
+    border: none;
+    background: #ffffff00;
+    cursor: pointer;
+    color: #2a3c50;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    min-width: 70px;
+    position: relative;
+}
+
+.change:hover {
+    border:rgba(80, 144, 247, 0.225) solid 1px;
+    border-radius: 10px;
+    color: rgba(80, 144, 247, 0.225);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#img-proj {
+    width: 750px;
+    height: 400px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+}
+
+#proj-content {
+    text-align: center;
+    height: 450px;
+    width: 800px;
+    cursor: pointer;
+    position: relative;
+    margin: 20px;
+}
+
+#flex {
+    max-width: 550px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 15%;
+    top: 40%;
+}
+
+.container-hand {
+    text-align: center;
+}
+  
+#welcome-div {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards 1s;
+}
+  
+.hand {
+    position: relative;
+    width: 100px;
+    height: 150px;
+    left: 55%;
+    top: 90px;
+    transform-origin: bottom center;
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeIn 1.5s ease-in-out forwards 0.5s, wave 2s ease-in-out infinite 2s;
+}
+
+/* Wrist */
+.wrist {
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  background: #ffcc99;
+  border-radius: 20px;
+  bottom: -30px;
+  left: 30px;
+  z-index: 1;
+}
+
+/* Palm */
+.palm {
+  position: absolute;
+  width: 70px;
+  height: 100px;
+  background: #ffcc99;
+  border-radius: 40% 40% 30% 30%;
+  top: 60px;
+  left: 110px;
+  z-index: 2;
+}
+
+/* Thumb */
+.thumb {
+  position: absolute;
+  width: 18px;
+  height: 55px;
+  background: #ffcc99;
+  border-radius: 10px;
+  top: 65px;
+  left: 95px;
+  transform: rotate(-30deg);
+  z-index: 2;
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+}
+
+/* Fingers */
+.finger {
+  position: absolute;
+  background: #ffcc99;
+  border-radius: 10px;
+  z-index: 3;
+}
+
+/* Proporciones naturales */
+.finger1 {
+  width: 15px;
+  height: 55px;
+  top: 30px;
+  left: 114px;
+}
+
+.finger2 {
+  width: 18px;
+  height: 70px;
+  top: 17px;
+  left: 130px;
+}
+
+.finger3 {
+  width: 17px;
+  height: 60px;
+  top: 24px;
+  left: 149px;
+}
+
+.finger4 {
+  width: 14px;
+  height: 55px;
+  top: 44px;
+  left: 167px;
+}
+  
+@keyframes wave {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(20deg);
+    }
+}
+  
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      visibility: visible;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
