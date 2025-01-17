@@ -4,65 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>My portafolio</title>
 </head>
 <body>
-    <header id="">
+    <header>
         <nav id="navbar" class="fixed">
             <ul id="navbar-content">
-                <li class="link-icon">
-                    <a class="" href="#about-me">About me</a>
+                <li class="link-icon" onmouseover="ChangeIcon(1)" onmouseleave="ChangeIcon(2)">
+                    <a href="#" onclick="ShowPage(true)">
+                        <i id="about-me-icon" class="fas fa-user"></i>
+                    </a>
                 </li>
-                <li class="link-icon">
-                    <a class="" href="#contact-section">My projects</a>
+
+                
+                <li class="link-icon" onmouseover="ChangeIcon(3)" onmouseleave="ChangeIcon(4)">
+                    <a href="#" onclick="ShowPage(false)">
+                        <i id="projects-icon" class="fas fa-project-diagram"></i>
+                    </a>
                 </li>
             </ul>
         </nav>
+
+        <span id="about-me-link" class="span-nav" style="display: none;">About me</span>
+        <span id="projects-link" class="span-nav" style="display: none;">My projects</span>
     </header>
 
     <section id="welcome-section" class="section-style">
-        <div id="welcome-div">
-            <h1 id="h1-welcome">Hello there!</h1>
+        <div class="container-hand">
+            <div class="hand">
+              <div class="palm"></div>
+              <div class="thumb"></div>
+              <div class="finger finger1"></div>
+              <div class="finger finger2"></div>
+              <div class="finger finger3"></div>
+              <div class="finger finger4"></div>
+            </div>
 
-            <div id="after-h1">
-                <span id="myname">I'm Daniela, a web developer</span>
-                <span id="somewords">Welcome to my portafolio!</span>
+            <div id="welcome-div">
+                <h1 id="h1-welcome">Hello there!</h1>
+    
+                <div id="after-h1">
+                    <span id="myname">I'm Daniela, a web developer</span>
+                    <span id="somewords">Welcome to my portafolio!</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="about-me" class="section-style">
-        <span>Lets go to learn something about me!</span>
-        
+    <section id="about-me" class="section-style" style="display: none;">
         <div id="first">
-            <h2 id="h2">
+            <h2 class="h2">
                 My skills
             </h2>
-    
+            
             <ul id="list-skills">
                 <li class="skills">
-                    JavaScript
-                </li>
-                <li class="skills">
-                    React Js
-                </li>
-                <li class="skills">
-                    HTML5
-                </li>
-                <li class="skills">
+                    <span>Frontend Development: </span>
+                    <br>
+                    <i class="fab fa-html5" style="color: brown;"></i>
+                    HTML
+                    <br>
+                    <i class="fab fa-css3" style="color: rgb(56, 143, 219);"></i>
                     CSS
+                    <br>
+                    <i class="fab fa-js" style="color: rgb(235, 201, 64);"></i>
+                    JavaScript
+                    <br>
+                    <i class="fab fa-react" style="color: rgb(108, 160, 224);"></i>
+                    React JS
                 </li>
+
                 <li class="skills">
-                    Web development
+                    <span>Basics: </span> 
+                    <br>
+                    <i class="fas fa-database" style="color: rgb(72, 98, 98);"></i>
+                    MySQL
+                    (basic knowledge)
                 </li>
+
                 <li class="skills">
-                    
-                </li>
-                <li class="skills">
-                    
-                </li>
-                <li class="skills">
-                    
+                    <span>Other Skills: </span>
+                    <br>
+                    TypeScript 
+                    (beginner level)
+                    <br>
+                    <i class="fas fa-laptop-code"></i>
+                    Responsive Design
+                    <br>
+                    <i class="fas fa-cogs" style="color: rgb(165, 108, 42);"></i>
+                    Problem-Solving
                 </li>
             </ul>
         </div>
@@ -73,9 +104,9 @@
             </h2>
 
             <p id="experience">
-                I'm a empiric developer with 2 years of experience in coding HTML5, CSS and JS; 
-                I have 1 year of experience using React Js, and a little bit of knowlege in typescript and mySQL. 
-                I hope continue growing my knowleges, and become in a great developer!
+                I am a self-taught web developer with 2 years of experience coding in HTML5, CSS, and JavaScript, and 1 year of experience using React.js. 
+                I also have some knowledge of TypeScript and MySQL. 
+                I am passionate about web development and continuously improving my skills to become an exceptional developer.
             </p>
         </div>
 
@@ -84,21 +115,20 @@
                 My aspirations
             </h2>
 
-            <p id="experience">
-                I'm a empiric developer with 2 years of experience in coding HTML5, CSS and JS; 
-                I have 1 year of experience using React Js, and a little bit of knowlege in typescript and mySQL. 
-                I hope continue growing my knowleges, and become in a great developer!
+            <p id="aspirations">
+                I strive to expand my knowledge in modern web technologies, improve my expertise in full-stack development, and contribute to impactful projects. 
+                My ultimate goal is to grow as a professional and become a highly skilled and sought-after developer.
             </p>
         </div>
     </section>
 
-    <section id="projects" class="project-tile section-style">
+    <section id="projects" class="project-tile section-style" style="display: none;">
         <div id="recop">
             <button class="change" onclick="showPreviousProject()" style="left: 5px;">&lt;</button>
 
             <div id="proj-content" onmouseleave="onMouse(false)">
                 <div id="onMouse">
-                    <h4 id="name" style="font-size: 20px;">Survey Form</h4>
+                    <h4 id="name" style="font-size: 20px;" class="project-tile">Survey Form</h4>
                     <img id="img-proj" alt="Survey Form" onmouseover="onMouse(true)" src="https://rony260519.github.io/silver-dollop/proj-4.png">
                 </div>
                 
@@ -113,9 +143,15 @@
     </section>
 
     <section id="contact-section" class="section-style fixed">
-        <a id="profile-link" target="_blank" href="">Github</a>
-        <a id="profile-link" target="_blank" href="">Github</a>
-        <a id="profile-link" target="_blank" href="">Github</a>
+        <a class="profile-link" target="_blank" href="">
+            <i class="fab fa-github"></i>    
+        </a>
+        <a class="profile-link" target="_blank" href="">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a class="profile-link" target="_blank" href="">
+            <i class="fab fa-linkedin"></i>
+        </a>
     </section>
 
     <script>
@@ -123,6 +159,39 @@
         const imgProj = document.getElementById("img-proj");
         const descript = document.getElementById("descript");
         const linkProj = document.getElementById("link-proj");
+
+        const projects = document.getElementById("projects");
+        const about_me = document.getElementById("about-me");
+        const welcome_section = document.getElementById("welcome-section");
+
+        const projects_icon = document.getElementById("projects-icon");
+        const about_me_icon = document.getElementById("about-me-icon");
+        const projects_link = document.getElementById("projects-link");
+        const about_me_link = document.getElementById("about-me-link");
+
+        function ShowPage (page) {
+            if (page === true) {
+                about_me.style.display = "block";
+                projects.style.display = "none";
+                welcome_section.style.display = "none";
+            } else {
+                about_me.style.display = "none";
+                projects.style.display = "block";
+                welcome_section.style.display = "none";
+            }
+        }
+
+        function ChangeIcon (icon) {
+            if (icon == 1) {
+                about_me_link.style.display = "block";
+            } else if (icon == 2) {
+                about_me_link.style.display = "none";
+            } else if (icon == 3) {
+                projects_link.style.display = "block";
+            } else if (icon == 4) {
+                projects_link.style.display = "none";
+            }
+        }
 
         const obj = {
             h1: [
@@ -140,7 +209,7 @@
                 "https://rony260519.github.io/silver-dollop/proj-2.png",
                 "https://rony260519.github.io/silver-dollop/proj-1.png",
                 "https://rony260519.github.io/silver-dollop/snake.png",
-                "https://rony260519.github.io/silver-dollop/snake.png"
+                "https://rony260519.github.io/silver-dollop/rspnew.png"
             ],
 
             alt: [
@@ -167,7 +236,7 @@
                 "https://dany260519.github.io/prog-3/",
                 "https://dany260519.github.io/prog-4/",
                 "https://dany260519.github.io/snake/",
-                "https://dany260519.github.io/snake/"
+                "https://dany260519.github.io/sturdy-space-broccoli/"
             ]
         };
 
