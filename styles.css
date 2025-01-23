@@ -289,15 +289,70 @@ a i:hover {
     }
 }
 
+#somewords {
+    color: #5177a1;
+    font-weight: 700;
+    width: 400px;
+    padding: 5px;
+    margin: 2px;
+}
+
+
+#after-h1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#descript {
+    font-size: 18px;
+}
+
 @media screen and (max-width: 768px){
     .hand {
-        width: 100px;
-        height: 150px;
-        left: 55%;
-        top: 90px;
+        width: 80px;
+        height: 130px;
+        left: 50%;
+        top: 70px;
         transform-origin: bottom center;
         opacity: 0;
         visibility: hidden;
         animation: fadeIn 1.5s ease-in-out forwards 0.5s, wave 2s ease-in-out infinite 2s;
+    }
+
+    #welcome-div {
+        font-size: 14px;
+    }
+
+    #somewords {
+        width: 200px;
+    }
+
+    #recop {
+        gap: 40px;
+    }
+
+    #img-proj {
+        width: 250px;
+        height: 150px;
+    }
+    
+    #proj-content {
+        height: 250px;
+        width: 200px;
+        margin: 5px;
+        right: 5.5%;
+    }
+    
+    #descript {
+        font-size: 12px;
+    }
+
+    .change {
+        font-size: 50px;
+        border: none;
+        font-weight: 600;
+        min-width: 50px;
     }
 }
