@@ -287,4 +287,17 @@ a i:hover {
       opacity: 1;
       visibility: visible;
     }
-  }
+}
+
+@media screen and (max-width: 768px){
+    .hand {
+        width: 100px;
+        height: 150px;
+        left: 55%;
+        top: 90px;
+        transform-origin: bottom center;
+        opacity: 0;
+        visibility: hidden;
+        animation: fadeIn 1.5s ease-in-out forwards 0.5s, wave 2s ease-in-out infinite 2s;
+    }
+}
